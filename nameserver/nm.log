@@ -1,0 +1,4919 @@
+[2025-11-14 21:24:14.651] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"correct_test.txt,test_fix.txt,test_access.txt,haha.txt,test_undo.txt,test_concurrent.txt,myfile.txt,test_private.txt,test_write.txt,test_exec2.txt,mytext.txt,test_stream.txt,test_newfile.txt,test_exec.txt"}
+
+[2025-11-14 21:24:14.651] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-14 21:24:21.101] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-14 21:24:21.101] RESP: status=0 user=sahu
+[2025-11-14 21:24:22.685] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-14 21:24:32.206] REQ: {"op":"STREAM_ROUTE","file":"mytext.txt"}
+
+[2025-11-14 21:24:55.769] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-14 23:29:08.702] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"mytext.txt"}
+
+[2025-11-14 23:29:08.702] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-14 23:29:15.404] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-14 23:29:15.404] RESP: status=0 user=sahu
+[2025-11-14 23:29:19.139] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-14 23:29:23.241] REQ: {"op":"LIST_USERS"}
+
+[2025-11-19 12:07:06.440] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"mytext.txt"}
+
+[2025-11-19 12:07:06.442] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 12:07:22.340] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 12:07:22.342] RESP: status=0 user=sahu
+[2025-11-19 12:07:28.010] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 12:07:42.489] REQ: {"op":"DELETE","file":"mytext.txt","user":"sahu"}
+
+[2025-11-19 12:08:09.260] REQ: {"op":"CREATE","file":"lol.txt","user":"sahu"}
+
+[2025-11-19 12:08:33.038] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":""}
+
+[2025-11-19 12:08:33.038] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 12:08:46.597] REQ: {"op":"CREATE","file":"lol.txt","user":"sahu"}
+
+[2025-11-19 12:08:58.622] REQ: {"op":"WRITE_ROUTE","file":"lol.txt"}
+
+[2025-11-19 12:09:10.945] REQ: {"op":"READ_ROUTE","file":"lol.txt"}
+
+[2025-11-19 12:09:20.077] REQ: {"op":"WRITE_ROUTE","file":"lol.txt"}
+
+[2025-11-19 12:09:38.045] REQ: {"op":"WRITE_ROUTE","file":"lol.txt"}
+
+[2025-11-19 12:10:00.893] REQ: {"op":"READ_ROUTE","file":"lol.txt"}
+
+[2025-11-19 12:10:08.544] REQ: {"op":"WRITE_ROUTE","file":"lol.txt"}
+
+[2025-11-19 12:10:25.740] REQ: {"op":"READ_ROUTE","file":"lol.txt"}
+
+[2025-11-19 12:10:40.671] REQ: {"op":"CREATE","file":"exec.txt","user":"sahu"}
+
+[2025-11-19 12:10:46.639] REQ: {"op":"WRITE_ROUTE","file":"exec.txt"}
+
+[2025-11-19 12:11:13.886] REQ: {"op":"READ_ROUTE","file":"exec.txt"}
+
+[2025-11-19 12:11:24.476] REQ: {"op":"EXEC","file":"exec.txt","user":"sahu"}
+
+[2025-11-19 12:12:17.913] REQ: {"op":"LIST_USERS"}
+
+[2025-11-19 12:22:18.715] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lol.txt,exec.txt"}
+
+[2025-11-19 12:22:18.716] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 12:22:24.500] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 12:22:24.501] RESP: status=0 user=sahu
+[2025-11-19 12:22:26.390] REQ: {"op":"LIST_USERS"}
+
+[2025-11-19 12:22:41.073] REQ: {"op":"LIST_USERS"}
+
+[2025-11-19 12:22:42.916] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 12:23:07.383] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 12:24:05.168] REQ: {"op":"WRITE_ROUTE","file":"exec.txt"}
+
+[2025-11-19 12:24:22.676] REQ: {"op":"READ_ROUTE","file":"exec.txt"}
+
+[2025-11-19 12:25:41.370] REQ: {"op":"WRITE_ROUTE","file":"exec.txt"}
+
+[2025-11-19 12:26:08.712] REQ: {"op":"READ_ROUTE","file":"exec.txt"}
+
+[2025-11-19 12:30:50.398] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lol.txt,exec.txt"}
+
+[2025-11-19 12:30:50.399] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 12:31:07.351] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 12:31:07.352] RESP: status=0 user=sahu
+[2025-11-19 12:31:31.139] REQ: {"op":"WRITE_ROUTE","file":"exec.txt"}
+
+[2025-11-19 12:31:41.554] REQ: {"op":"INFO","file":"exec.txt"}
+
+[2025-11-19 12:33:41.692] REQ: {"op":"WRITE_ROUTE","file":"exec.txt"}
+
+[2025-11-19 14:04:05.057] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lol.txt,exec.txt"}
+
+[2025-11-19 14:04:05.058] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 14:04:12.897] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 14:04:12.898] RESP: status=0 user=sahu
+[2025-11-19 14:04:27.609] REQ: {"op":"READ_ROUTE","file":"exec.txt","user":"sahu"}
+
+[2025-11-19 14:04:42.036] REQ: {"op":"LIST_USERS","user":"sahu"}
+
+[2025-11-19 14:05:02.027] REQ: {"op":"EXEC","file":"exec.txt","user":"sahu"}
+
+[2025-11-19 14:13:07.579] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lol.txt,exec.txt"}
+
+[2025-11-19 14:13:07.581] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 14:13:14.247] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 14:13:14.248] RESP: status=0 user=sahu
+[2025-11-19 14:13:29.836] REQ: {"op":"EXEC","file":"exec.txt","user":"sahu"}
+
+[2025-11-19 14:15:25.299] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lol.txt,exec.txt"}
+
+[2025-11-19 14:15:25.300] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 14:15:32.654] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 14:15:32.654] RESP: status=0 user=sahu
+[2025-11-19 14:15:46.012] REQ: {"op":"EXEC","file":"exec.txt","user":"sahu"}
+
+[2025-11-19 14:16:13.659] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lol.txt,exec.txt"}
+
+[2025-11-19 14:16:13.659] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 14:16:24.355] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 14:16:24.356] RESP: status=0 user=sahu
+[2025-11-19 14:16:31.730] REQ: {"op":"EXEC","file":"exec.txt","user":"sahu"}
+
+[2025-11-19 14:16:58.441] REQ: {"op":"CREATE","file":"kill.txt","user":"sahu"}
+
+[2025-11-19 14:17:05.378] REQ: {"op":"WRITE_ROUTE","file":"kill.txt","user":"sahu"}
+
+[2025-11-19 14:17:47.419] REQ: {"op":"READ_ROUTE","file":"kill.txt","user":"sahu"}
+
+[2025-11-19 14:17:57.645] REQ: {"op":"EXEC","file":"kill.txt","user":"sahu"}
+
+[2025-11-19 14:18:18.611] REQ: {"op":"DELETE","file":"lol.txt","user":"sahu"}
+
+[2025-11-19 14:18:26.595] REQ: {"op":"DELETE","file":"exec.txt","user":"sahu"}
+
+[2025-11-19 14:18:32.657] REQ: {"op":"DELETE","file":"kill.txt","user":"sahu"}
+
+[2025-11-19 18:53:29.298] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lohith.txt"}
+
+[2025-11-19 18:53:29.298] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 18:53:38.909] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 18:53:38.909] RESP: status=0 user=sahu
+[2025-11-19 18:54:23.195] REQ: {"op":"CREATEFOLDER","folder":"lolfolder"}
+
+[2025-11-19 18:54:26.481] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 18:54:37.575] REQ: {"op":"CREATE","file":"mytext.txt","user":"sahu"}
+
+[2025-11-19 18:54:43.589] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 18:55:07.083] REQ: {"op":"MOVE","file":"mytext.txt","folder":"lolfolder"}
+
+[2025-11-19 18:55:13.966] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 18:55:30.586] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:04:01.698] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 19:04:01.698] RESP: status=0 user=sahu
+[2025-11-19 19:04:04.133] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:04:12.016] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:04:46.502] REQ: {"op":"CREATE","file":"mytext.txt","user":"sahu"}
+
+[2025-11-19 19:05:02.609] REQ: {"op":"DELETE","file":"mytext.txt","user":"sahu"}
+
+[2025-11-19 19:05:19.926] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lohith.txt"}
+
+[2025-11-19 19:05:19.926] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 19:05:23.615] REQ: {"op":"CLI_REGISTER","user":"[A"}
+
+[2025-11-19 19:05:23.615] RESP: status=0 user=[A
+[2025-11-19 19:05:32.297] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 19:05:32.297] RESP: status=0 user=sahu
+[2025-11-19 19:05:38.895] REQ: {"op":"CREATE","file":"mytext.txt","user":"sahu"}
+
+[2025-11-19 19:06:04.070] REQ: {"op":"MOVE","file":"mytext.txt","folder":"lolfolder"}
+
+[2025-11-19 19:07:16.897] REQ: {"op":"CREATEFOLDER","folder":"lolfolder"}
+
+[2025-11-19 19:07:28.757] REQ: {"op":"MOVE","file":"mytext.txt","folder":"lolfolder"}
+
+[2025-11-19 19:07:35.129] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:07:47.841] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:08:08.715] REQ: {"op":"CREATEFOLDER","folder":"lmaofolder"}
+
+[2025-11-19 19:08:17.293] REQ: {"op":"CREATE","file":"lmao.txt","user":"sahu"}
+
+[2025-11-19 19:08:25.325] REQ: {"op":"MOVE","file":"lmao.txt","folder":"lmaofolder"}
+
+[2025-11-19 19:08:30.572] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:08:53.900] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:09:05.636] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:13:37.890] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder,lohith.txt"}
+
+[2025-11-19 19:13:37.890] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 19:13:46.050] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 19:13:46.050] RESP: status=0 user=sahu
+[2025-11-19 19:13:48.407] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:14:04.089] REQ: {"op":"VIEWFOLDER","folder":""}
+
+[2025-11-19 19:14:23.616] REQ: {"op":"VIEWFOLDER","folder":"lolfolder"}
+
+[2025-11-19 19:14:32.801] REQ: {"op":"VIEWFOLDER","folder":"lmaofolder"}
+
+[2025-11-19 19:14:48.812] REQ: {"op":"DELETE","file":"lohith.txt","user":"sahu"}
+
+[2025-11-19 19:14:52.054] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:37:53.675] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder"}
+
+[2025-11-19 19:37:53.676] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 19:37:58.506] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 19:37:58.507] RESP: status=0 user=sahu
+[2025-11-19 19:38:03.251] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:38:15.740] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 19:38:15.740] RESP: status=0 user=lohith
+[2025-11-19 19:38:18.346] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 19:38:41.513] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"lohith","user":"lohith"}
+
+[2025-11-19 19:38:51.690] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 19:38:51.690] RESP: status=0 user=lohith
+[2025-11-19 19:39:02.302] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 19:41:58.211] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder"}
+
+[2025-11-19 19:41:58.211] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 19:42:07.110] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 19:42:07.111] RESP: status=0 user=sahu
+[2025-11-19 19:42:12.964] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 19:42:12.965] RESP: status=0 user=lohith
+[2025-11-19 19:42:18.290] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 19:42:36.088] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:42:59.025] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 19:43:06.142] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:51:05.443] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder"}
+
+[2025-11-19 19:51:05.443] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 19:51:10.747] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 19:51:10.747] RESP: status=0 user=sahu
+[2025-11-19 19:51:17.267] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 19:51:17.267] RESP: status=0 user=lohith
+[2025-11-19 19:51:22.853] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:51:34.092] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 19:51:40.921] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 19:52:03.209] REQ: {"op":"RESPONDREQUEST","file":"mytext.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 19:52:13.783] REQ: {"op":"RESPONDREQUEST","file":"lmao.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 19:52:17.314] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 19:52:20.469] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 19:56:11.727] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder"}
+
+[2025-11-19 19:56:11.727] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 19:56:18.293] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 19:56:18.293] RESP: status=0 user=sahu
+[2025-11-19 19:56:24.333] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 19:56:24.333] RESP: status=0 user=lohith
+[2025-11-19 19:56:25.822] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 19:56:50.599] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 19:56:59.338] REQ: {"op":"VIEWREQUESTS","user":"sahu"}
+
+[2025-11-19 19:57:10.811] REQ: {"op":"RESPONDREQUEST","file":"mytext.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 19:57:14.925] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 19:57:16.817] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 19:57:33.630] REQ: {"op":"WRITE_ROUTE","file":"mytext.txt","user":"lohith"}
+
+[2025-11-19 20:01:07.612] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder"}
+
+[2025-11-19 20:01:07.612] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 20:01:12.192] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 20:01:12.192] RESP: status=0 user=sahu
+[2025-11-19 20:01:20.247] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 20:01:20.247] RESP: status=0 user=lohith
+[2025-11-19 20:01:25.372] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:01:36.317] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 20:01:44.309] REQ: {"op":"VIEWREQUESTS","user":"sahu"}
+
+[2025-11-19 20:01:52.178] REQ: {"op":"RESPONDREQUEST","file":"mytext.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 20:01:56.748] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:02:05.392] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:05:21.723] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder"}
+
+[2025-11-19 20:05:21.723] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 20:05:26.344] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 20:05:26.344] RESP: status=0 user=sahu
+[2025-11-19 20:05:31.916] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 20:05:31.916] RESP: status=0 user=lohith
+[2025-11-19 20:05:35.403] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 20:05:45.018] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 20:05:57.144] REQ: {"op":"RESPONDREQUEST","file":"mytext.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 20:06:00.350] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:09:05.620] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder"}
+
+[2025-11-19 20:09:05.620] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 20:09:09.749] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 20:09:09.749] RESP: status=0 user=sahu
+[2025-11-19 20:09:10.621] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:09:14.787] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 20:09:14.787] RESP: status=0 user=lohith
+[2025-11-19 20:09:15.622] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:09:18.183] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:09:20.622] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:09:25.623] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:09:26.679] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 20:09:30.624] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:09:35.624] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:09:37.036] REQ: {"op":"RESPONDREQUEST","file":"mytext.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 20:09:40.301] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:09:40.625] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:09:42.860] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:09:45.626] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:09:50.627] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:09:55.628] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:10:00.628] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:10:05.629] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:10:10.630] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:10:15.631] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:10:19.348] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:10:20.632] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:10:25.632] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:10:30.633] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:10:35.634] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:10:40.635] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:10:45.635] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:10:50.636] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:10:55.637] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:11:00.638] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:11:05.638] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:11:15.639] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:11:20.640] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:11:25.641] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:11:26.729] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 20:11:30.642] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:11:32.517] REQ: {"op":"VIEWREQUESTS","user":"sahu"}
+
+[2025-11-19 20:11:35.642] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:11:40.643] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:11:41.791] REQ: {"op":"RESPONDREQUEST","file":"mytext.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 20:11:44.853] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:11:45.644] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:11:50.645] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:11:55.645] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:12:01.887] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder"}
+
+[2025-11-19 20:12:01.888] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 20:12:06.888] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:12:07.462] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:12:11.889] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:12:28.641] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder"}
+
+[2025-11-19 20:12:28.641] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 20:12:33.049] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 20:12:33.049] RESP: status=0 user=sahu
+[2025-11-19 20:12:33.642] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:12:37.933] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 20:12:37.933] RESP: status=0 user=lohith
+[2025-11-19 20:12:38.642] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:12:43.643] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:12:44.832] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:12:48.644] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:12:53.645] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:12:58.646] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:13:03.646] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:13:07.135] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 20:13:08.647] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:13:13.648] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:13:18.008] REQ: {"op":"RESPONDREQUEST","file":"mytext.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 20:13:18.648] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:13:22.733] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:13:23.649] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:13:28.650] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:13:33.650] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:13:38.651] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:13:43.651] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:13:48.652] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:13:53.653] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:13:58.653] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:14:03.654] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:14:08.655] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:14:13.655] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:14:18.656] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:14:23.657] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:14:28.657] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:14:33.658] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:15:01.046] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder"}
+
+[2025-11-19 20:15:01.047] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 20:15:04.768] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 20:15:04.768] RESP: status=0 user=sahu
+[2025-11-19 20:15:06.047] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:15:11.048] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:15:11.743] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 20:15:11.743] RESP: status=0 user=lohith
+[2025-11-19 20:15:16.049] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:15:21.006] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 20:15:21.049] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:15:26.050] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:15:31.051] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:15:33.998] REQ: {"op":"RESPONDREQUEST","file":"mytext.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 20:15:36.052] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:15:37.080] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:15:41.052] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:15:46.052] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:15:51.053] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:15:56.054] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:16:01.054] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:16:06.055] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:16:11.056] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:16:16.057] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:16:21.057] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:16:26.058] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:16:31.059] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:16:36.060] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:16:41.060] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:16:46.061] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:16:51.062] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:16:56.062] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:17:01.063] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:17:06.064] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:17:11.065] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:17:36.418] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder"}
+
+[2025-11-19 20:17:36.418] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 20:17:40.982] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 20:17:40.982] RESP: status=0 user=sahu
+[2025-11-19 20:17:41.419] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:17:45.226] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 20:17:45.226] RESP: status=0 user=lohith
+[2025-11-19 20:17:46.420] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:17:51.421] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:17:56.422] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:18:01.422] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:18:06.423] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:18:11.424] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:18:16.425] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:18:20.006] REQ: {"op":"REQUESTACCESS","file":"lolfolder/mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 20:18:21.425] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:18:26.426] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:18:31.427] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:18:32.284] REQ: {"op":"VIEWREQUESTS","user":"sahu"}
+
+[2025-11-19 20:18:36.428] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:18:41.428] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:18:43.964] REQ: {"op":"RESPONDREQUEST","file":"lolfolder/mytext.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 20:18:46.429] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:18:47.181] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:18:51.429] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:18:56.430] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:19:01.431] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:19:16.667] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder,lmaofolder"}
+
+[2025-11-19 20:19:16.667] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 20:19:21.668] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:19:22.621] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 20:19:22.621] RESP: status=0 user=sahu
+[2025-11-19 20:19:26.669] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:19:31.670] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:19:35.227] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 20:19:35.228] RESP: status=0 user=lohith
+[2025-11-19 20:19:36.670] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:19:39.283] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 20:19:41.670] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:19:46.671] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:19:51.381] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 20:19:51.672] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:19:56.672] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:20:01.673] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:20:04.318] REQ: {"op":"RESPONDREQUEST","file":"mytext.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 20:20:06.674] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:20:07.289] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:20:11.674] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:20:16.675] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:20:21.676] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:20:26.676] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:20:31.677] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:20:36.678] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:20:41.679] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:20:46.679] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:20:51.680] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:20:56.681] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:21:01.681] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:21:06.682] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:21:11.683] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:21:16.683] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:21:21.684] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:21:26.685] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:21:31.685] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:21:36.686] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:21:41.687] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:22:03.375] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder/mytext.txt,lmaofolder/lmao.txt"}
+
+[2025-11-19 20:22:03.375] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 20:22:07.541] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 20:22:07.541] RESP: status=0 user=sahu
+[2025-11-19 20:22:08.375] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:22:12.901] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 20:22:12.901] RESP: status=0 user=lohith
+[2025-11-19 20:22:13.376] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:22:16.666] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:22:18.377] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:22:23.377] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:22:28.378] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:22:33.379] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:22:34.352] REQ: {"op":"REQUESTACCESS","file":"mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 20:22:38.379] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:22:43.380] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:22:48.381] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:22:49.176] REQ: {"op":"RESPONDREQUEST","file":"mytext.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 20:22:52.417] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:22:53.381] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:22:58.381] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:23:02.926] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:23:03.382] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:23:08.383] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:23:13.383] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:23:14.913] REQ: {"op":"CREATE","file":"hello.txt","user":"sahu"}
+
+[2025-11-19 20:23:18.384] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:23:23.385] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:23:28.386] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:23:28.390] REQ: {"op":"REQUESTACCESS","file":"hello.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 20:23:33.386] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:23:37.470] REQ: {"op":"RESPONDREQUEST","file":"hello.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 20:23:38.387] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:23:40.745] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:23:43.388] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:23:48.388] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:23:53.389] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:23:58.390] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:24:03.391] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:24:08.391] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:24:13.392] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:24:18.393] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:24:23.393] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:24:28.394] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:24:33.395] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:24:38.395] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:24:43.396] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:24:48.396] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:24:53.397] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:24:58.398] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:25:03.399] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:25:08.399] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:25:13.400] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:25:18.400] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:25:23.401] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:25:28.402] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:25:33.403] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:25:38.403] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:25:43.404] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:25:48.405] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:25:53.405] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:25:58.406] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:26:03.407] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:26:17.859] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lolfolder/mytext.txt,lmaofolder/lmao.txt,hello.txt"}
+
+[2025-11-19 20:26:17.859] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-19 20:26:21.938] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-19 20:26:21.938] RESP: status=0 user=sahu
+[2025-11-19 20:26:22.860] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:26:26.131] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-19 20:26:26.131] RESP: status=0 user=lohith
+[2025-11-19 20:26:27.860] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:26:32.861] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:26:37.861] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:26:42.862] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:26:47.850] REQ: {"op":"REQUESTACCESS","file":"lolfolder/mytext.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 20:26:47.862] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:26:52.862] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:26:57.863] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:27:02.863] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:27:07.864] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:27:10.934] REQ: {"op":"RESPONDREQUEST","file":"lolfolder/mytext.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 20:27:12.865] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:27:15.312] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:27:17.865] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:27:22.866] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:27:23.586] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-19 20:27:27.867] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:27:32.868] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:27:37.868] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:27:41.602] REQ: {"op":"REQUESTACCESS","file":"hello.txt","owner":"sahu","user":"lohith"}
+
+[2025-11-19 20:27:42.869] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:27:47.870] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:27:51.538] REQ: {"op":"VIEWREQUESTS","user":"sahu"}
+
+[2025-11-19 20:27:52.871] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:27:57.872] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:28:00.869] REQ: {"op":"RESPONDREQUEST","file":"hello.txt","requester":"lohith","approve":1,"user":"sahu"}
+
+[2025-11-19 20:28:02.872] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:28:04.574] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-19 20:28:07.873] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:28:12.873] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:28:17.874] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:28:22.875] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:28:27.875] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:28:32.876] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:28:37.877] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:28:42.878] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:28:47.878] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:28:52.879] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:28:57.880] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:29:02.881] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:29:07.881] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:29:12.881] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:29:17.882] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:29:22.882] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-19 20:29:27.883] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:30:12.170] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lmaofolder/lmao.txt,lolfolder/mytext.txt,hello.txt"}
+
+[2025-11-20 15:30:12.171] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 15:30:17.178] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:30:22.185] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:30:24.718] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 15:30:24.719] RESP: status=0 user=lohith
+[2025-11-20 15:30:27.005] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 15:30:27.192] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:30:32.203] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:30:34.131] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 15:30:37.211] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:30:39.690] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 15:30:42.219] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:30:47.228] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:30:52.237] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:30:57.242] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:31:02.246] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:31:07.251] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:31:12.261] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:31:17.267] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:31:22.274] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:31:27.282] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:31:32.291] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:31:37.300] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:31:42.309] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:31:47.315] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:31:52.321] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:31:57.326] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:32:02.338] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:32:07.346] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:32:12.351] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:32:17.359] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:32:22.365] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:32:27.373] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:32:32.381] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:32:37.391] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:32:42.398] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:32:47.401] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:32:52.409] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:32:57.417] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:33:02.423] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:33:07.431] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:33:12.440] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:33:17.450] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:33:22.456] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:33:27.464] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:33:32.468] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:33:37.477] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:33:42.486] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:33:47.489] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:33:52.492] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:33:57.498] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:34:02.506] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:34:07.516] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:34:12.530] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:34:17.537] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:34:22.545] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:34:27.552] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:34:32.554] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:34:37.560] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:34:41.878] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-20 15:34:41.878] RESP: status=0 user=sahu
+[2025-11-20 15:34:42.567] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:34:43.584] REQ: {"op":"LIST_USERS","user":"sahu"}
+
+[2025-11-20 15:34:47.573] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:34:52.576] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:34:55.360] REQ: {"op":"CLI_REGISTER","user":"aaku"}
+
+[2025-11-20 15:34:55.361] RESP: status=0 user=aaku
+[2025-11-20 15:34:57.094] REQ: {"op":"LIST_USERS","user":"aaku"}
+
+[2025-11-20 15:34:57.583] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:35:02.590] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:35:07.591] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:35:12.597] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:35:17.600] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:35:22.606] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:35:27.610] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:35:32.616] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:35:37.624] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:35:42.632] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:35:47.641] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:35:52.646] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:35:57.652] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:36:02.661] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:36:07.671] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:36:12.676] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:36:17.685] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:36:22.691] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:36:27.697] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:36:32.703] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:36:33.989] REQ: {"op":"LIST_USERS","user":"aaku"}
+
+[2025-11-20 15:36:37.710] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:36:38.504] REQ: {"op":"LIST_USERS","user":"aaku"}
+
+[2025-11-20 15:36:40.537] REQ: {"op":"LIST_USERS","user":"aaku"}
+
+[2025-11-20 15:36:42.715] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:36:47.722] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:36:52.729] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:36:57.737] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:37:02.741] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:37:07.749] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:37:12.757] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:37:17.764] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:37:22.769] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:37:27.776] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:37:32.782] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:37:37.789] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:37:42.795] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:37:47.803] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:37:52.810] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:37:57.816] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:38:02.821] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:38:07.827] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:38:12.832] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:41:09.153] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"files":"lmaofolder/lmao.txt,lolfolder/mytext.txt,hello.txt"}
+
+[2025-11-20 15:41:09.156] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 15:41:14.163] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:41:19.172] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:41:24.186] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:41:29.195] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:41:34.210] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:41:39.222] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:41:44.239] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:41:49.253] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:41:54.265] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:41:59.276] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:42:04.289] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:42:09.300] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:42:14.310] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:42:19.317] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:42:24.321] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:42:29.334] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:42:34.344] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:42:39.355] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:42:44.363] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:42:48.654] REQ: {"op":"CLI_REGISTER","user":"tester"}
+
+[2025-11-20 15:42:48.655] RESP: status=0 user=tester
+[2025-11-20 15:42:48.656] REQ: {"op":"CREATE","file":"cktest.txt","user":"tester"}
+
+[2025-11-20 15:42:48.658] REQ: {"op":"WRITE_ROUTE","file":"cktest.txt","user":"tester"}
+
+[2025-11-20 15:42:48.676] REQ: {"op":"CHECKPOINT","file":"cktest.txt","tag":"v1"}
+
+[2025-11-20 15:42:48.677] REQ: {"op":"WRITE_ROUTE","file":"cktest.txt","user":"tester"}
+
+[2025-11-20 15:42:48.682] REQ: {"op":"VIEWCHECKPOINT","file":"cktest.txt","tag":"v1"}
+
+[2025-11-20 15:42:48.683] REQ: {"op":"REVERT","file":"cktest.txt","tag":"v1"}
+
+[2025-11-20 15:42:48.684] REQ: {"op":"READ_ROUTE","file":"cktest.txt","user":"tester"}
+
+[2025-11-20 15:42:48.686] REQ: {"op":"LISTCHECKPOINTS","file":"cktest.txt"}
+
+[2025-11-20 15:42:49.366] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:42:54.374] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:42:59.385] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:43:04.396] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:43:09.410] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:43:14.417] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:43:19.428] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:43:24.436] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:43:29.449] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:43:34.459] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:43:39.471] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:43:44.481] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:43:49.494] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:43:54.508] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:43:59.521] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:44:04.532] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:44:09.541] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:44:12.417] REQ: {"op":"CLI_REGISTER","user":"tester"}
+
+[2025-11-20 15:44:12.418] RESP: status=0 user=tester
+[2025-11-20 15:44:12.418] REQ: {"op":"CHECKPOINT","file":"cktest.txt","tag":"v1"}
+
+[2025-11-20 15:44:12.419] REQ: {"op":"WRITE_ROUTE","file":"cktest.txt","user":"tester"}
+
+[2025-11-20 15:44:12.434] REQ: {"op":"CHECKPOINT","file":"cktest.txt","tag":"v2"}
+
+[2025-11-20 15:44:12.435] REQ: {"op":"VIEWCHECKPOINT","file":"cktest.txt","tag":"v1"}
+
+[2025-11-20 15:44:12.436] REQ: {"op":"REVERT","file":"cktest.txt","tag":"v1"}
+
+[2025-11-20 15:44:12.437] REQ: {"op":"READ_ROUTE","file":"cktest.txt","user":"tester"}
+
+[2025-11-20 15:44:12.438] REQ: {"op":"LISTCHECKPOINTS","file":"cktest.txt"}
+
+[2025-11-20 15:44:14.548] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:44:19.560] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:44:24.570] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:44:29.578] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:44:34.586] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:44:39.596] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:44:44.604] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:44:49.613] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:44:54.619] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:44:59.627] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:45:04.639] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:45:09.650] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:45:14.659] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:45:19.668] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:45:24.680] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:45:29.689] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:45:34.699] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:45:39.712] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:45:44.717] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:45:49.729] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:45:54.741] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:45:59.747] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:46:04.756] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:46:09.765] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:46:14.774] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:46:19.786] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:46:24.796] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:46:29.804] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:46:34.811] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:46:39.820] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:46:44.826] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:46:49.833] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:46:54.843] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:46:59.851] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:47:04.867] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:47:09.879] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:47:14.889] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 15:47:19.896] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:15:10.034] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"files":""}
+
+[2025-11-20 16:15:10.035] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 16:15:15.042] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:15:18.334] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 16:15:18.335] RESP: status=0 user=lohith
+[2025-11-20 16:15:20.049] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:15:20.723] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 16:15:25.054] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:15:30.061] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:15:35.071] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:15:40.079] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:15:45.086] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:15:49.183] REQ: {"op":"CREATEFOLDER","folder":"lokola"}
+
+[2025-11-20 16:15:50.091] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:15:55.099] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:16:00.120] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:16:05.128] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:16:10.135] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:16:15.142] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:16:16.843] REQ: {"op":"CREATE","file":"lokola.txt","user":"lohith"}
+
+[2025-11-20 16:16:20.151] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:16:25.161] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:16:30.168] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:16:35.177] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:16:40.184] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:16:45.188] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:16:50.195] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:16:51.110] REQ: {"op":"MOVE","file":"lokola.txt","folder":"lokola"}
+
+[2025-11-20 16:16:55.202] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:17:00.209] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:17:05.220] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:17:10.228] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:17:15.235] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:17:20.242] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:17:25.254] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:17:29.428] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 16:17:30.263] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:17:35.271] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:17:40.276] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:17:45.283] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:17:49.012] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-20 16:17:49.012] RESP: status=0 user=sahu
+[2025-11-20 16:17:50.290] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:17:55.297] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:00.300] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:05.305] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:10.313] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:15.318] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:20.326] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:25.341] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:30.345] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:35.350] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:40.357] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:45.361] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:50.367] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:51.068] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 16:18:55.228] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 16:18:55.373] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:18:58.941] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 16:19:00.379] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:19:03.060] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 16:19:05.385] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:19:10.387] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:19:15.394] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:19:20.400] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:19:25.404] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:19:30.410] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:19:35.415] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:19:40.422] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:19:45.429] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:19:50.436] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:19:55.441] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:20:00.450] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:20:05.457] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:20:10.465] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:20:15.474] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:20:20.479] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:20:21.018] REQ: {"op":"LIST_USERS","user":"sahu"}
+
+[2025-11-20 16:20:23.824] REQ: {"op":"CLI_DEREGISTER","user":"sahu"}
+
+[2025-11-20 16:20:23.825] DISCONNECT: user=sahu from 0.0.0.0:58803
+[2025-11-20 16:20:25.485] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:20:30.491] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:20:31.227] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 16:20:35.494] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:20:37.528] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-20 16:20:37.528] RESP: status=0 user=sahu
+[2025-11-20 16:20:40.066] REQ: {"op":"LIST_USERS","user":"sahu"}
+
+[2025-11-20 16:20:40.497] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:20:43.362] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 16:20:45.504] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:20:50.510] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:20:55.516] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:21:00.523] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:21:05.527] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:21:10.533] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:21:15.540] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:21:18.366] REQ: {"op":"REQUESTACCESS","file":"lokola/lokola.txt","owner":"lohith","user":"sahu"}
+
+[2025-11-20 16:21:20.547] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:21:25.554] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:21:30.561] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:21:30.629] REQ: {"op":"VIEWREQUESTS","user":"lohith"}
+
+[2025-11-20 16:21:35.569] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:21:40.577] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:21:45.582] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:21:50.586] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:21:55.593] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:00.601] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:05.609] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:05.883] REQ: {"op":"RESPONDREQUEST","file":"lokola/lokola.txt","requester":"sahu","approve":1,"user":"lohith"}
+
+[2025-11-20 16:22:10.619] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:15.627] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:20.404] REQ: {"op":"CLI_REGISTER","user":"aaku"}
+
+[2025-11-20 16:22:20.404] RESP: status=0 user=aaku
+[2025-11-20 16:22:20.634] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:25.639] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:26.580] REQ: {"op":"VIEW_ROUTE","user":"aaku"}
+
+[2025-11-20 16:22:30.644] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:31.008] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 16:22:35.651] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:40.660] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:45.666] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:50.674] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:55.678] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:22:56.148] REQ: {"op":"ADDACCESS","file":"lokola/lokola.txt","mode":"W","target_user":"aaku","user":"lohith"}
+
+[2025-11-20 16:22:58.569] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 16:23:00.680] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:23:04.743] REQ: {"op":"VIEW_ROUTE","user":"aaku"}
+
+[2025-11-20 16:23:05.689] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:23:10.697] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:23:15.706] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:23:20.715] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:23:25.718] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:23:26.478] REQ: {"op":"REMACCESS","file":"lokola/lokola.txt","target_user":"aaku","user":"lohith"}
+
+[2025-11-20 16:23:30.726] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:23:35.734] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:23:37.249] REQ: {"op":"VIEW_ROUTE","user":"aaku"}
+
+[2025-11-20 16:23:40.741] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:23:45.749] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:23:50.754] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:23:55.761] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:24:00.766] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:24:05.773] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:24:10.779] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:24:15.786] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:24:20.792] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:24:23.591] REQ: {"op":"VIEWFOLDER","folder":"lokola"}
+
+[2025-11-20 16:24:25.796] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:24:30.802] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:24:35.808] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:24:40.811] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:24:45.818] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:24:50.823] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:24:55.830] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:25:00.837] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:25:05.842] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:25:06.638] REQ: {"op":"REQUESTACCESS","file":"lokola/lokola.txt","owner":"lohith","user":"aaku"}
+
+[2025-11-20 16:25:10.850] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:25:15.857] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:25:20.854] REQ: {"op":"VIEWREQUESTS","user":"lohith"}
+
+[2025-11-20 16:25:20.861] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:25:25.868] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:25:30.877] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:25:35.893] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:25:40.903] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:25:45.907] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:25:50.912] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:25:55.917] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:00.922] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:05.928] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:06.234] REQ: {"op":"RESPONDREQUEST","file":"lokola/lokola.txt","requester":"aaku","approve":0,"user":"lohith"}
+
+[2025-11-20 16:26:10.931] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:11.956] REQ: {"op":"VIEW_ROUTE","user":"aaku"}
+
+[2025-11-20 16:26:15.938] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:20.944] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:24.033] REQ: {"op":"WRITE_ROUTE","file":"lokola.txt","user":"lohith"}
+
+[2025-11-20 16:26:25.949] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:30.958] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:35.970] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:36.178] REQ: {"op":"WRITE_ROUTE","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 16:26:40.976] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:45.983] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:50.987] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:55.989] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:26:58.765] REQ: {"op":"READ_ROUTE","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 16:27:00.996] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:27:06.002] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:27:07.204] REQ: {"op":"EXEC","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 16:27:11.018] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:27:16.021] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:27:21.028] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:27:25.032] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 16:27:26.035] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:27:31.043] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:27:36.051] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:27:41.055] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:27:46.063] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:27:51.072] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:27:56.079] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:27:58.891] REQ: {"op":"CHECKPOINT","file":"lokola/lokola.txt","tag":"1"}
+
+[2025-11-20 16:28:01.089] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:28:06.094] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:28:11.100] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:28:16.106] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:28:21.114] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:28:26.123] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:28:31.130] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:28:36.140] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:28:41.148] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:28:46.155] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:28:51.163] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:28:56.167] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:29:01.169] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:29:06.174] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:29:11.177] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:29:16.184] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:29:21.192] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:29:26.199] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:29:31.205] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:29:36.213] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:29:41.219] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:29:46.223] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:29:51.226] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:29:56.234] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:30:01.238] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:30:06.244] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:30:11.250] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:30:16.257] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:30:21.265] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:30:26.269] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:30:31.274] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:30:36.282] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:30:41.290] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:30:46.294] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:30:51.301] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:30:56.307] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:31:01.313] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:31:06.320] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:31:11.328] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:31:16.337] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:31:21.344] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:31:26.352] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:31:31.360] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:31:36.368] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:31:41.372] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:31:46.378] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:31:51.385] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:31:56.390] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:32:01.396] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:32:06.404] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:32:11.411] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:32:16.420] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:32:21.427] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:32:26.436] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:32:31.443] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:32:36.455] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:32:41.461] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:32:46.465] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:32:51.469] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:32:56.474] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:33:01.478] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:33:06.486] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:33:11.495] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:33:16.506] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:33:21.520] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:33:26.528] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:33:31.538] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:33:36.546] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:33:41.558] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:33:46.572] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:33:51.579] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:33:56.587] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:34:01.595] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:34:06.606] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:34:11.613] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:34:16.621] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:34:21.626] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:34:26.639] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:34:31.645] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:34:36.652] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:34:41.661] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:34:46.669] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:34:51.674] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:34:56.681] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:35:01.688] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:35:06.698] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:35:11.703] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:35:16.710] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:35:21.718] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:35:26.726] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:35:31.729] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:35:36.736] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:35:41.742] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:35:46.428] REQ: {"op":"CHECKPOINT","file":"lokola/lokola.txt","tag":"v1"}
+
+[2025-11-20 16:35:46.750] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:35:51.758] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:35:56.760] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:36:01.771] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:36:06.778] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:36:11.780] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:36:16.784] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:36:21.790] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:36:26.797] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:36:31.801] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:36:36.808] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:36:41.815] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:36:46.822] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:36:51.829] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:36:56.834] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:37:01.845] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:37:06.856] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:37:11.863] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:37:16.869] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:37:21.882] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:37:26.890] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:37:31.895] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:37:35.645] REQ: {"op":"CLI_DEREGISTER","user":"aaku"}
+
+[2025-11-20 16:37:35.645] DISCONNECT: user=aaku from 0.0.0.0:60519
+[2025-11-20 16:37:36.898] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:37:39.394] REQ: {"op":"CLI_DEREGISTER","user":"sahu"}
+
+[2025-11-20 16:37:39.396] DISCONNECT: user=sahu from 0.0.0.0:60521
+[2025-11-20 16:37:41.906] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:37:46.909] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:37:51.916] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:37:56.917] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:38:01.923] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:38:06.931] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:38:11.934] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:38:16.941] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:38:21.949] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:38:26.957] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:38:31.964] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:38:36.973] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:38:41.979] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:38:46.988] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:38:51.991] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:38:56.998] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:39:02.006] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:39:07.012] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:39:12.026] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:39:17.032] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:39:22.037] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:39:27.045] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:39:32.052] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:39:37.061] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:39:42.070] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:39:47.078] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:39:52.082] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:39:57.085] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:40:02.089] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:40:07.096] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:40:12.103] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:40:17.108] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:40:22.119] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:40:27.125] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:40:32.129] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:40:37.137] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:40:42.143] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:40:47.149] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:40:52.156] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:40:57.164] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:41:02.173] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:41:07.182] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:41:12.187] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:41:17.194] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:41:22.204] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:41:27.210] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:41:32.217] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:42:31.676] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"files":"lokola/lokola.txt"}
+
+[2025-11-20 16:42:31.676] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 16:42:36.690] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:42:41.697] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:42:43.070] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 16:42:43.072] RESP: status=0 user=lohith
+[2025-11-20 16:42:46.443] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 16:42:46.705] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:42:49.063] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 16:42:51.711] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:42:56.720] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:43:01.729] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:43:06.737] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:43:11.746] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:43:16.754] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:43:17.129] REQ: {"op":"VIEWFOLDER","folder":"lokola","user":"lohith"}
+
+[2025-11-20 16:43:21.762] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:43:26.771] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:43:31.779] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:43:36.785] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:43:41.792] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:43:44.547] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-20 16:43:44.549] RESP: status=0 user=sahu
+[2025-11-20 16:43:46.186] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 16:43:46.800] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:43:51.807] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:43:56.815] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:44:01.824] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:44:04.163] REQ: {"op":"READ_ROUTE","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 16:44:06.836] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:44:11.844] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:44:16.848] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:44:21.857] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:44:26.865] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:44:29.068] REQ: {"op":"INFO","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 16:44:31.869] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:44:36.876] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:44:41.889] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:44:46.896] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:44:51.899] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:44:56.906] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:45:01.917] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:45:06.921] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:45:11.933] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:45:16.940] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:45:21.948] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:45:26.957] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:45:31.965] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:45:36.973] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:45:41.985] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:45:46.992] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:45:52.000] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:45:57.003] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:46:02.014] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:46:07.023] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:46:12.030] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:46:17.031] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:46:22.042] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:46:27.050] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:46:32.061] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:46:37.067] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:46:42.073] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:46:47.082] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:46:52.086] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:46:57.090] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:47:02.097] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:47:07.105] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:47:12.109] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:47:17.111] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:47:22.117] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:47:27.124] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:47:32.133] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:47:37.140] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:47:42.146] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:47:47.155] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:47:52.163] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:47:57.169] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:48:02.174] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:48:47.310] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"files":"lokola/lokola.txt"}
+
+[2025-11-20 16:48:47.311] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 16:48:52.317] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:48:57.325] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:49:01.012] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 16:49:01.013] RESP: status=0 user=lohith
+[2025-11-20 16:49:02.329] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:49:07.331] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:49:09.980] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-20 16:49:09.981] RESP: status=0 user=sahu
+[2025-11-20 16:49:12.338] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:49:12.901] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 16:49:14.689] REQ: {"op":"LIST_USERS","user":"sahu"}
+
+[2025-11-20 16:49:17.344] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:49:18.842] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 16:49:20.694] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 16:49:22.355] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:49:27.363] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:49:32.370] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:49:37.378] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:49:42.383] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:49:43.787] REQ: {"op":"INFO","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 16:49:47.389] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:49:52.395] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:49:57.403] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:50:02.411] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:50:07.422] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:50:12.426] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:50:17.433] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:50:22.071] REQ: {"op":"CREATE","file":"sahu.txt","user":"sahu"}
+
+[2025-11-20 16:50:22.439] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:50:27.447] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:50:32.452] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:50:33.205] REQ: {"op":"MOVE","file":"sahu.txt","folder":"lokola","user":"sahu"}
+
+[2025-11-20 16:50:37.461] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:50:42.468] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:50:44.605] REQ: {"op":"VIEWFOLDER","folder":"lokola","user":"sahu"}
+
+[2025-11-20 16:50:47.477] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:50:52.484] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:50:57.491] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:51:02.492] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:51:05.088] REQ: {"op":"VIEWFOLDER","folder":"lokola","user":"lohith"}
+
+[2025-11-20 16:51:07.495] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:51:12.496] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:51:17.499] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:51:22.503] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:51:27.510] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:51:32.518] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:51:37.525] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:51:42.529] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:51:47.538] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:51:52.544] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:51:57.551] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:52:02.558] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:52:07.565] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:52:12.571] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:52:17.578] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:52:22.584] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:52:27.587] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:52:32.594] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:52:37.602] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:52:42.608] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:52:47.615] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:52:52.621] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:52:57.626] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:53:02.631] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:53:07.640] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:53:12.650] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:53:17.655] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:56:02.906] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"files":"lokola/lokola.txt,lokola/sahu.txt"}
+
+[2025-11-20 16:56:02.906] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 16:56:07.913] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:56:09.399] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 16:56:09.400] RESP: status=0 user=lohith
+[2025-11-20 16:56:11.153] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 16:56:12.918] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:56:17.921] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:56:22.330] REQ: {"op":"INFO","file":"lokola/lokola.txt]","user":"lohith"}
+
+[2025-11-20 16:56:22.928] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:56:27.935] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:56:31.407] REQ: {"op":"INFO","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 16:56:32.940] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:56:37.948] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:56:42.958] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:56:46.701] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 16:56:47.965] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:56:52.972] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:56:57.977] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:57:02.981] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:57:07.986] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:57:08.045] REQ: {"op":"VIEWFOLDER","folder":"lokola","user":"lohith"}
+
+[2025-11-20 16:57:12.992] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:57:17.998] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:57:23.016] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:57:28.021] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:57:31.282] REQ: {"op":"CHECKPOINT","file":"lokola/lokola.txt","tag":"v1","user":"lohith"}
+
+[2025-11-20 16:57:33.028] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:57:38.030] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:57:43.036] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:57:48.041] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:57:48.262] REQ: {"op":"VIEWCHECKPOINT","file":"lokola/lokola.txt","tag":"v1","user":"lohith"}
+
+[2025-11-20 16:57:53.048] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:57:58.060] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:58:03.068] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:58:08.073] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:58:13.080] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:58:18.085] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:58:23.095] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:58:26.570] REQ: {"op":"WRITE_ROUTE","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 16:58:28.103] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:58:33.112] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:58:38.118] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:58:43.121] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:58:44.586] REQ: {"op":"READ_ROUTE","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 16:58:48.124] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:58:53.132] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:58:58.139] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:59:01.292] REQ: {"op":"CHECKPOINT","file":"lokola/lokola.txt","tag":"v2","user":"lohith"}
+
+[2025-11-20 16:59:03.148] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:59:08.153] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:59:13.160] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:59:13.985] REQ: {"op":"VIEWCHECKPOINT","file":"lokola/lokola.txt","tag":"v1","user":"lohith"}
+
+[2025-11-20 16:59:18.163] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:59:23.172] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:59:26.678] REQ: {"op":"VIEWCHECKPOINT","file":"lokola/lokola.txt","tag":"v2","user":"lohith"}
+
+[2025-11-20 16:59:28.179] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:59:33.181] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:59:38.188] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:59:43.198] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:59:46.008] REQ: {"op":"LISTCHECKPOINTS","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 16:59:48.205] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:59:53.218] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 16:59:58.226] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:00:03.233] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:00:08.242] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:00:08.695] REQ: {"op":"REVERT","file":"lokola/lokola.txt","tag":"v1","user":"lohith"}
+
+[2025-11-20 17:00:13.248] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:00:18.256] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:00:19.074] REQ: {"op":"READ_ROUTE","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 17:00:23.264] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:00:28.273] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:00:33.280] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:00:38.287] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:00:43.293] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:00:43.545] REQ: {"op":"LISTCHECKPOINTS","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 17:00:48.303] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:00:53.310] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:00:55.021] REQ: {"op":"REVERT","file":"lokola/lokola.txt","tag":"v2","user":"lohith"}
+
+[2025-11-20 17:00:58.316] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:01:03.324] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:01:05.398] REQ: {"op":"READ_ROUTE","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 17:01:08.332] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:01:13.340] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:01:18.348] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:01:23.356] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:01:28.361] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:01:33.366] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:01:38.372] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:01:43.375] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:01:48.382] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:01:53.390] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:01:55.853] REQ: {"op":"STREAM_ROUTE","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 17:01:58.398] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:03.402] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:08.408] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:13.416] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:18.423] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:23.431] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:28.441] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:33.355] REQ: {"op":"ADDACCESS","file":"lokola/sahu.txt","mode":"W","target_user":"lohith","user":"lohith"}
+
+[2025-11-20 17:02:33.449] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:38.454] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:43.463] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:48.466] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:53.473] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:55.067] REQ: {"op":"DELETE","file":"lokola/sahu.txt","user":"lohith"}
+
+[2025-11-20 17:02:58.479] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:02:59.279] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 17:03:03.476] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 17:03:03.486] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:03:08.493] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:03:13.499] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:03:18.507] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:03:23.511] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:03:28.524] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:03:33.534] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:03:38.540] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:03:43.548] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:03:48.556] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:03:53.564] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:03:58.572] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:04:03.578] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:04:08.581] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:04:14.026] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"files":"lokola/lokola.txt"}
+
+[2025-11-20 17:04:14.027] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 17:04:19.031] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:04:24.040] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:04:29.049] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:04:34.055] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:04:37.092] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 17:04:39.061] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:04:41.567] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 17:04:44.069] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:04:44.088] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 17:04:47.687] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 17:04:49.074] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:04:55.429] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 17:05:05.138] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"files":"lokola/lokola.txt"}
+
+[2025-11-20 17:05:05.139] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 17:05:10.144] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:05:10.875] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 17:05:15.150] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:05:20.157] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:05:25.160] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:20:49.806] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"files":"lokola/lokola.txt"}
+
+[2025-11-20 17:20:49.812] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 17:20:54.916] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:21:00.032] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:21:05.151] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:21:10.273] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:21:10.395] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 17:21:10.396] RESP: status=0 user=lohith
+[2025-11-20 17:21:15.390] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:21:18.050] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 17:21:20.507] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:21:25.658] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:21:28.091] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-20 17:21:28.094] RESP: status=0 user=sahu
+[2025-11-20 17:21:30.453] REQ: {"op":"LIST_USERS","user":"sahu"}
+
+[2025-11-20 17:21:30.772] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:21:32.718] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 17:21:35.978] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:21:41.294] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:21:46.418] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:21:51.533] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:21:56.660] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:22:01.774] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:22:06.817] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:22:11.841] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:22:16.872] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:22:21.936] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:22:27.072] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:22:32.192] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:22:37.310] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:22:42.347] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:22:46.705] REQ: {"op":"CLI_DEREGISTER","user":"sahu"}
+
+[2025-11-20 17:22:46.707] DISCONNECT: user=sahu from 0.0.0.0:64437
+[2025-11-20 17:22:47.447] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:22:52.563] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:22:57.597] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:23:02.708] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:23:07.823] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:23:12.946] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:23:16.337] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 17:23:18.066] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:23:23.092] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:23:28.200] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:23:30.561] REQ: {"op":"CREATE","file":"sahu.txt","user":"lohith"}
+
+[2025-11-20 17:23:33.324] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:23:38.454] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:23:43.561] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:23:48.685] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:23:53.816] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:23:58.922] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:24:04.042] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:24:09.079] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:24:14.197] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:24:19.334] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:24:24.431] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:24:29.547] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:45:08.406] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"ss_host":"192.168.1.113","files":"lokola/lokola.txt"}
+
+[2025-11-20 17:45:08.411] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 17:45:13.426] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:45:18.534] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:45:23.658] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:45:24.783] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 17:45:24.784] RESP: status=0 user=lohith
+[2025-11-20 17:45:28.160] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 17:45:28.776] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:45:31.538] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 17:45:33.810] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:45:38.930] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:45:42.409] REQ: {"op":"CREATE","file":"sahu.txt","user":"lohith"}
+
+[2025-11-20 17:45:44.036] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:45:49.170] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:45:54.229] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:45:59.421] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:46:04.530] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:46:09.651] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:46:14.786] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:46:19.877] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:46:25.021] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:46:26.904] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-20 17:46:26.905] RESP: status=0 user=sahu
+[2025-11-20 17:46:30.125] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:46:35.241] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:46:37.135] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 17:46:40.468] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:46:41.805] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 17:46:45.580] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:46:50.698] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:46:53.424] REQ: {"op":"CREATE","file":"ronny.txt","user":"sahu"}
+
+[2025-11-20 17:46:55.822] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:47:00.938] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:47:06.285] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:47:11.386] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:47:16.813] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:47:21.890] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:47:26.954] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:47:32.085] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:47:36.903] REQ: {"op":"CLI_DEREGISTER","user":"lohith"}
+
+[2025-11-20 17:47:36.905] DISCONNECT: user=lohith from 0.0.0.0:49318
+[2025-11-20 17:47:37.434] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:47:42.637] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:47:47.700] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:47:52.968] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:47:58.080] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:48:03.203] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:48:08.321] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:48:13.476] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:48:18.114] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 17:48:18.593] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:48:23.691] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:48:28.824] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:48:30.129] REQ: {"op":"DELETE","file":"ronny.txt","user":"sahu"}
+
+[2025-11-20 17:48:33.248] REQ: {"op":"CLI_DEREGISTER","user":"sahu"}
+
+[2025-11-20 17:48:33.248] DISCONNECT: user=sahu from 0.0.0.0:50420
+[2025-11-20 17:48:34.004] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:48:39.445] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:48:44.569] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:48:49.687] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:48:54.816] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:48:59.931] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:49:05.058] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:49:05.424] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-20 17:49:05.425] RESP: status=0 user=sahu
+[2025-11-20 17:49:10.169] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:49:15.201] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:49:20.314] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:49:24.179] REQ: {"op":"CLI_DEREGISTER","user":"sahu"}
+
+[2025-11-20 17:49:24.180] DISCONNECT: user=sahu from 0.0.0.0:50430
+[2025-11-20 17:49:25.427] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:49:30.456] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:49:35.576] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:49:36.231] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 17:49:36.232] RESP: status=0 user=lohith
+[2025-11-20 17:49:39.061] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 17:49:40.693] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:49:45.828] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:49:50.941] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:49:56.151] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:49:59.097] REQ: {"op":"WRITE_ROUTE","file":"sahu.txt","user":"lohith"}
+
+[2025-11-20 17:50:01.271] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:50:06.396] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:50:11.435] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:50:16.528] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:50:21.654] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:50:26.765] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:50:31.891] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:50:31.902] REQ: {"op":"READ_ROUTE","file":"sahu.txt","user":"lohith"}
+
+[2025-11-20 17:50:37.009] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:50:38.781] REQ: {"op":"WRITE_ROUTE","file":"sahu.txt","user":"lohith"}
+
+[2025-11-20 17:50:42.130] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:50:47.251] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:50:52.365] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:50:56.629] REQ: {"op":"READ_ROUTE","file":"sahu.txt","user":"lohith"}
+
+[2025-11-20 17:50:57.491] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:51:02.611] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:51:07.731] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:51:12.908] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:51:13.974] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-20 17:51:13.978] RESP: status=0 user=sahu
+[2025-11-20 17:51:18.073] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:51:23.195] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:51:28.327] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:51:32.711] REQ: {"op":"REQUESTACCESS","file":"sahu.txt","owner":"lohith","user":"sahu"}
+
+[2025-11-20 17:51:33.432] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:51:38.559] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:51:42.978] REQ: {"op":"VIEWREQUESTS","user":"lohith"}
+
+[2025-11-20 17:51:43.677] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:51:48.801] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:51:54.111] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:51:54.594] REQ: {"op":"RESPONDREQUEST","file":"sahu.txt","requester":"sahu","approve":1,"user":"lohith"}
+
+[2025-11-20 17:51:57.696] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 17:51:59.236] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:52:04.360] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:52:09.475] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:52:14.291] REQ: {"op":"WRITE_ROUTE","file":"sahu.txt","user":"sahu"}
+
+[2025-11-20 17:52:14.505] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:52:19.584] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:52:24.835] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:52:29.954] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:52:35.084] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:52:40.214] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:52:45.326] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:52:46.008] REQ: {"op":"WRITE_ROUTE","file":"sahu.txt","user":"lohith"}
+
+[2025-11-20 17:52:50.455] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:52:55.557] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:53:00.677] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:53:05.800] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:53:10.928] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:53:16.062] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:53:21.175] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:53:26.302] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:53:31.400] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:53:36.515] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:53:41.552] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:53:46.661] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:53:51.853] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:53:57.069] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:54:01.611] REQ: {"op":"READ_ROUTE","file":"sahu.txt","user":"sahu"}
+
+[2025-11-20 17:54:02.318] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:54:07.447] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:54:12.567] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:54:17.677] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:54:22.804] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:54:27.921] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:54:33.041] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:54:38.167] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:54:43.283] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:54:48.406] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:54:53.539] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:54:58.844] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:55:04.170] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:55:09.319] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:55:14.415] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:55:19.539] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:55:24.700] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:55:29.772] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:55:34.897] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:55:40.015] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:55:45.047] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:55:50.162] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:55:55.580] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:56:00.724] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:56:05.838] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:56:10.882] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:56:15.953] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:56:21.101] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:56:23.285] REQ: {"op":"CREATE","file":"undo.txt","user":"lohith"}
+
+[2025-11-20 17:56:26.224] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:56:30.053] REQ: {"op":"WRITE_ROUTE","file":"undo.txt","user":"lohith"}
+
+[2025-11-20 17:56:31.341] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:56:36.421] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:56:41.561] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:56:46.602] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:56:49.056] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 17:56:51.701] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:56:55.488] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 17:56:56.826] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:57:01.951] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:57:04.212] REQ: {"op":"WRITE_ROUTE","file":"undo.txt","user":"sahu"}
+
+[2025-11-20 17:57:07.058] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:57:12.306] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:57:17.427] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:57:22.557] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:57:28.742] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:57:34.902] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:57:40.036] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:57:46.185] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:57:51.300] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:57:56.427] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:58:01.566] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:58:06.655] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:58:11.773] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:58:16.895] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:58:22.015] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:58:27.140] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:58:32.192] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:58:37.278] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:58:42.401] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:58:47.614] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:58:52.741] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:58:57.857] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:59:02.994] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:59:08.129] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:59:13.232] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:59:18.365] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:59:23.490] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:59:28.793] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:59:33.904] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:59:38.942] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:59:44.051] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:59:49.082] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:59:54.176] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 17:59:59.297] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:00:04.416] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:00:09.541] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:00:14.656] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:00:19.776] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:00:24.927] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:00:27.053] REQ: {"op":"DELETE","file":"undo.txt","user":"sahu"}
+
+[2025-11-20 18:00:29.975] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:00:35.037] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:00:40.156] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:00:45.295] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:00:50.499] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:00:55.826] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:01:00.947] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:01:06.118] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:01:11.181] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:01:16.333] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:01:21.423] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:01:22.245] REQ: {"op":"INFO","file":"undo.txt","user":"sahu"}
+
+[2025-11-20 18:01:26.577] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:01:29.514] REQ: {"op":"INFO","file":"sahu.txt","user":"sahu"}
+
+[2025-11-20 18:01:31.661] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:01:36.696] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:01:41.808] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:01:46.923] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:01:52.062] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:01:57.188] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:02:02.294] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:02:07.407] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:02:12.521] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:02:17.674] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:02:22.766] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:02:27.892] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:02:33.002] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:02:38.121] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:02:43.244] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:02:48.364] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:02:53.488] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:02:58.617] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:03:03.745] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:03:05.144] REQ: {"op":"CLI_DEREGISTER","user":"sahu"}
+
+[2025-11-20 18:03:05.145] DISCONNECT: user=sahu from 0.0.0.0:60838
+[2025-11-20 18:03:08.881] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:03:10.807] REQ: {"op":"CLI_DEREGISTER","user":"lohith"}
+
+[2025-11-20 18:03:10.809] DISCONNECT: user=lohith from 0.0.0.0:51303
+[2025-11-20 18:32:37.386] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"ss_host":"192.168.1.107","files":"lokola/lokola.txt"}
+
+[2025-11-20 18:32:37.387] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 18:32:42.393] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:32:46.199] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 18:32:46.200] RESP: status=0 user=lohith
+[2025-11-20 18:32:47.397] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:32:48.067] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 18:32:52.402] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:32:55.061] REQ: {"op":"INFO","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 18:32:57.410] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:33:02.418] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:33:07.424] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:33:12.428] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:33:17.433] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:33:22.443] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:33:27.453] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:33:32.464] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:33:37.468] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:33:42.475] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:33:47.483] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:33:52.487] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:33:57.494] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:34:02.497] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:34:07.506] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:34:12.514] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:34:17.519] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:34:22.527] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:34:25.341] REQ: {"op":"CLI_DEREGISTER","user":"lohith"}
+
+[2025-11-20 18:34:25.342] DISCONNECT: user=lohith from 0.0.0.0:56440
+[2025-11-20 18:34:27.535] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:36:26.649] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"ss_host":"192.168.1.107","files":"lokola/lokola.txt"}
+
+[2025-11-20 18:36:26.651] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 18:36:31.657] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:36:32.481] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 18:36:32.482] RESP: status=0 user=lohith
+[2025-11-20 18:36:36.665] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:36:41.587] REQ: {"op":"INFO","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 18:36:41.670] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:36:46.678] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:36:51.688] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:36:56.698] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:37:01.706] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:37:06.711] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:37:11.720] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:37:14.443] REQ: {"op":"REMACCESS","file":"lokola/lokola.txt","target_user":"sahu","user":"lohith"}
+
+[2025-11-20 18:37:16.728] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:37:21.737] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:37:26.747] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:37:27.084] REQ: {"op":"INFO","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 18:37:31.756] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:37:36.766] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:37:41.772] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:37:46.781] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:37:51.791] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:37:56.801] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:38:01.810] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:38:06.819] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:38:11.827] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:38:16.836] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:38:21.845] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:38:26.855] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:38:31.860] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:38:36.866] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:38:41.874] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:38:46.883] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:38:51.893] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:38:56.902] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:39:01.911] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:39:06.919] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:39:11.925] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:39:16.935] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:39:21.945] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:39:26.957] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:39:31.969] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:39:36.979] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:39:41.985] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:39:46.988] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:39:51.995] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:39:57.008] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:40:02.015] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:40:07.023] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:40:12.035] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:40:17.043] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:40:22.048] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:40:27.056] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:40:32.066] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:40:37.074] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:40:42.083] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:40:47.089] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:40:48.582] REQ: {"op":"ADDACCESS","file":"lokola/lokola.txt","mode":"W","target_user":"sahu","user":"lohith"}
+
+[2025-11-20 18:40:52.101] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:40:57.109] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:41:01.751] REQ: {"op":"INFO","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 18:41:02.117] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:41:07.127] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:41:12.136] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:41:17.145] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:41:22.154] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:41:27.165] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:41:32.173] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:41:37.176] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:41:42.188] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:41:47.193] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:41:52.206] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:41:57.213] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:42:38.980] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"ss_host":"192.168.1.107","files":"lokola/lokola.txt"}
+
+[2025-11-20 18:42:38.982] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 18:42:43.998] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:42:45.335] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 18:42:45.336] RESP: status=0 user=lohith
+[2025-11-20 18:42:47.182] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 18:42:49.007] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:42:54.015] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:42:59.022] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:42:59.924] REQ: {"op":"INFO","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 18:43:04.028] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:43:09.037] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:43:14.043] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:43:14.497] REQ: {"op":"ADDACCESS","file":"lokola/lokola.txt","mode":"R","target_user":"aaku","user":"lohith"}
+
+[2025-11-20 18:43:19.047] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:43:24.056] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:43:25.079] REQ: {"op":"INFO","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 18:43:29.065] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:43:34.073] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:43:36.363] REQ: {"op":"DELETE","file":"lokola/lokola.txt","user":"lohith"}
+
+[2025-11-20 18:43:39.083] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:43:44.094] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:43:49.105] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:43:54.114] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:43:59.123] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:44:04.130] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:44:09.139] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:44:14.148] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:44:19.156] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:44:24.162] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:44:29.170] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:44:34.183] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:44:39.195] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:44:44.205] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:44:49.214] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:44:54.225] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:44:59.240] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:45:04.250] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:45:09.260] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:45:14.271] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:45:19.276] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:45:24.285] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:45:29.294] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:45:34.299] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:45:39.307] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:47:36.612] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"ss_host":"192.168.1.107","files":""}
+
+[2025-11-20 18:47:36.614] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 18:47:41.621] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:47:46.633] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:47:51.642] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:47:56.650] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:47:58.630] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 18:47:58.631] RESP: status=0 user=lohith
+[2025-11-20 18:48:01.593] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 18:48:01.652] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:48:04.677] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 18:48:06.660] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:48:11.665] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:48:16.675] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:48:21.686] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:48:26.693] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:48:30.894] REQ: {"op":"CREATE","file":"lokola.txt","user":"lohith"}
+
+[2025-11-20 18:48:31.702] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:48:36.709] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:48:41.716] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:48:46.722] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:48:51.730] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:48:56.736] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:48:59.562] REQ: {"op":"INFO","file":"lokola.txt","user":"lohith"}
+
+[2025-11-20 18:49:01.747] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:49:06.756] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:49:11.766] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:49:15.186] REQ: {"op":"WRITE_ROUTE","file":"lokola.txt","user":"lohith"}
+
+[2025-11-20 18:49:16.778] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:49:21.788] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:49:26.797] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:49:31.805] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:49:32.676] REQ: {"op":"READ_ROUTE","file":"lokola.txt","user":"lohith"}
+
+[2025-11-20 18:49:36.813] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:49:41.818] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:49:46.827] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:49:51.835] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:49:56.846] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:50:01.857] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:50:06.869] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:50:11.874] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:50:16.883] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:50:18.218] REQ: {"op":"DELETE","file":"lokola.txt","user":"lohith"}
+
+[2025-11-20 18:50:21.891] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:50:26.898] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:50:31.903] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:50:36.909] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:50:41.917] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:50:46.925] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:50:51.934] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:50:56.939] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:51:01.946] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:51:06.951] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:51:11.961] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:51:16.968] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:51:21.976] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:51:26.983] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:51:31.992] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:51:37.000] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:51:42.007] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:51:43.271] REQ: {"op":"CLI_DEREGISTER","user":"lohith"}
+
+[2025-11-20 18:51:43.271] DISCONNECT: user=lohith from 0.0.0.0:58366
+[2025-11-20 18:56:17.656] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"ss_host":"192.168.1.107","files":"lokola.txt"}
+
+[2025-11-20 18:56:17.659] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 18:56:22.666] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:56:24.253] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 18:56:24.254] RESP: status=0 user=lohith
+[2025-11-20 18:56:25.596] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 18:56:27.672] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:56:32.681] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:56:33.138] REQ: {"op":"DELETE","file":"lokola.txt","user":"lohith"}
+
+[2025-11-20 18:56:37.692] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:56:40.424] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 18:56:42.701] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:56:47.710] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:56:52.720] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:56:57.731] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:57:02.738] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:57:07.747] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:59:08.859] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"ss_host":"192.168.1.105","files":""}
+
+[2025-11-20 18:59:08.865] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 18:59:13.957] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:59:19.180] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:59:24.296] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:59:29.482] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:59:31.988] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 18:59:31.990] RESP: status=0 user=lohith
+[2025-11-20 18:59:34.228] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-20 18:59:34.229] RESP: status=0 user=sahu
+[2025-11-20 18:59:34.568] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:59:39.656] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:59:40.070] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 18:59:44.776] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:59:49.995] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:59:55.242] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 18:59:57.989] REQ: {"op":"CREATE","file":"hello.txt","user":"sahu"}
+
+[2025-11-20 19:00:00.346] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:00:00.896] REQ: {"op":"CREATEFOLDER","folder":"lokola","user":"lohith"}
+
+[2025-11-20 19:00:05.465] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:00:10.064] REQ: {"op":"WRITE_ROUTE","file":"hello.txt","user":"sahu"}
+
+[2025-11-20 19:00:10.581] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:00:15.159] REQ: {"op":"CREATE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:00:15.701] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:00:19.372] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 19:00:20.918] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:00:26.147] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:00:31.371] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:00:32.889] REQ: {"op":"DELETE","file":"hello.txt","user":"lohith"}
+
+[2025-11-20 19:00:36.486] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:00:41.607] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:00:44.826] REQ: {"op":"INFO","file":"hello.txt","user":"lohith"}
+
+[2025-11-20 19:00:45.500] REQ: {"op":"DELETE","file":"lol.txt","user":"sahu"}
+
+[2025-11-20 19:00:46.825] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:00:52.048] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:00:53.122] REQ: {"op":"DELETE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:00:57.274] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:00:58.091] REQ: {"op":"DELETE","file":"hello.txt","user":"sahu"}
+
+[2025-11-20 19:01:01.798] REQ: {"op":"CREATE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:01:02.494] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:01:05.874] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 19:01:07.718] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:01:12.944] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:01:18.162] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:01:23.287] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:01:23.303] REQ: {"op":"CREATE","file":"hello.txt","user":"sahu"}
+
+[2025-11-20 19:01:28.404] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:01:30.688] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 19:01:33.526] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:01:38.648] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:01:43.763] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:01:46.760] REQ: {"op":"ADDACCESS","file":"hello.txt","mode":"W","target_user":"lohith","user":"lohith"}
+
+[2025-11-20 19:01:48.984] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:01:54.207] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:01:59.331] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:01:59.495] REQ: {"op":"ADDACCESS","file":"lol.txt","mode":"W","target_user":"sahu","user":"lohith"}
+
+[2025-11-20 19:02:04.549] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:02:09.771] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:02:14.898] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:02:16.119] REQ: {"op":"WRITE_ROUTE","file":"lol.tx","user":"lohith"}
+
+[2025-11-20 19:02:20.117] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:02:25.131] REQ: {"op":"WRITE_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:02:25.145] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:02:30.256] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:02:35.475] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:02:40.702] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:02:41.354] REQ: {"op":"READ_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:02:45.847] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:02:46.238] REQ: {"op":"WRITE_ROUTE","file":"lol.txt","user":"sahu"}
+
+[2025-11-20 19:02:50.947] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:02:56.070] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:02:56.084] REQ: {"op":"READ_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:03:01.102] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:03:06.147] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:03:11.239] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:03:16.342] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:03:21.455] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:03:27.578] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:03:28.782] REQ: {"op":"REMACCESS","file":"lol.txt","target_user":"sahu","user":"lohith"}
+
+[2025-11-20 19:03:32.822] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:03:37.948] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:03:44.086] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:03:49.216] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:03:54.326] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:03:55.130] REQ: {"op":"REMACCESS","file":"lol.txt","target_user":"sahu","user":"lohith"}
+
+[2025-11-20 19:03:59.447] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:04:04.665] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:04:06.792] REQ: {"op":"INFO","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:04:09.887] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:04:15.110] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:04:20.235] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:04:22.794] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 19:04:25.453] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:04:30.579] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:04:35.698] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:04:41.018] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:04:42.557] REQ: {"op":"ADDACCESS","file":"lol.txt","mode":"R","target_user":"sahu","user":"lohith"}
+
+[2025-11-20 19:04:46.240] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:04:48.897] REQ: {"op":"INFO","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:04:51.365] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:04:56.484] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:04:58.237] REQ: {"op":"WRITE_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:05:01.609] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:05:06.728] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:05:11.727] REQ: {"op":"READ_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:05:11.757] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:05:16.789] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:05:20.349] REQ: {"op":"WRITE_ROUTE","file":"lol.txt","user":"sahu"}
+
+[2025-11-20 19:05:21.880] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:05:26.196] REQ: {"op":"WRITE_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:05:35.141] REQ: {"op":"READ_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:05:59.871] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"ss_host":"192.168.1.105","files":"lol.txt,hello.txt"}
+
+[2025-11-20 19:05:59.872] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 19:06:05.006] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:06:10.124] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:06:15.241] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:06:15.558] REQ: {"op":"READ_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:06:20.351] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:06:23.196] REQ: {"op":"REMACCESS","file":"lol.txt","target_user":"sahu","user":"lohith"}
+
+[2025-11-20 19:06:25.472] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:06:30.591] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:06:30.813] REQ: {"op":"INFO","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:06:35.720] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:06:40.831] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:06:46.050] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:06:51.276] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:07:30.556] REQ: {"op":"CLI_DEREGISTER","user":"lohith"}
+
+[2025-11-20 19:07:30.561] DISCONNECT: user=lohith from 0.0.0.0:59862
+[2025-11-20 19:07:51.703] REQ: {"op":"CLI_DEREGISTER","user":"sahu"}
+
+[2025-11-20 19:07:51.711] DISCONNECT: user=sahu from 0.0.0.0:47178
+[2025-11-20 19:11:03.290] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"ss_host":"192.168.1.105","files":"lol.txt,hello.txt"}
+
+[2025-11-20 19:11:03.296] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 19:11:08.406] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:11:13.627] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:11:18.442] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-11-20 19:11:18.444] RESP: status=0 user=sahu
+[2025-11-20 19:11:18.652] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:11:18.974] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 19:11:18.975] RESP: status=0 user=lohith
+[2025-11-20 19:11:20.999] REQ: {"op":"LIST_USERS","user":"lohith"}
+
+[2025-11-20 19:11:23.765] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:11:27.341] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 19:11:28.885] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:11:34.104] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:11:35.540] REQ: {"op":"INFO","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:11:39.327] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:11:43.663] REQ: {"op":"DELETE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:11:44.553] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:11:49.774] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:11:50.721] REQ: {"op":"CREATE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:11:54.997] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:11:55.189] REQ: {"op":"INFO","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:12:00.127] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:12:05.250] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:12:07.091] REQ: {"op":"ADDACCESS","file":"lol.txt","mode":"W","target_user":"sahu","user":"lohith"}
+
+[2025-11-20 19:12:10.358] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:12:11.608] REQ: {"op":"INFO","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:12:15.577] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:12:20.606] REQ: {"op":"REMACCESS","file":"lol.txt","target_user":"sahu","user":"lohith"}
+
+[2025-11-20 19:12:20.635] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:12:25.722] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:12:26.877] REQ: {"op":"INFO","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:12:30.841] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:12:35.962] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:12:41.081] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:12:46.204] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:12:51.320] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:12:54.285] REQ: {"op":"ADDACCESS","file":"lol.txt","mode":"W","target_user":"sahu","user":"lohith"}
+
+[2025-11-20 19:12:56.539] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:13:01.027] REQ: {"op":"WRITE_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:13:01.763] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:13:06.886] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:13:12.307] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:13:17.532] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:13:22.753] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:13:27.783] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:13:30.536] REQ: {"op":"READ_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:13:32.897] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:13:37.382] REQ: {"op":"WRITE_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:13:38.021] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:13:43.136] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:13:48.353] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:13:49.814] REQ: {"op":"READ_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:13:53.575] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:13:58.798] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:14:00.408] REQ: {"op":"WRITE_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:14:04.020] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:14:09.245] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:14:14.465] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:14:17.166] REQ: {"op":"READ_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:14:19.690] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:14:24.927] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:14:29.728] REQ: {"op":"WRITE_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:14:29.976] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:14:35.054] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:14:39.148] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-11-20 19:14:40.172] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:14:45.299] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:14:45.706] REQ: {"op":"WRITE_ROUTE","file":"lol.txt","user":"sahu"}
+
+[2025-11-20 19:14:50.417] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:14:55.536] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:15:00.349] REQ: {"op":"READ_ROUTE","file":"lol.txt","user":"sahu"}
+
+[2025-11-20 19:15:00.566] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:15:05.679] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:15:10.805] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:15:15.930] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:15:20.987] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:15:26.064] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:15:27.832] REQ: {"op":"READ_ROUTE","file":"lol.txt","user":"lohith"}
+
+[2025-11-20 19:15:31.178] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:15:36.291] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:15:41.411] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:15:47.555] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:15:52.687] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:15:55.649] REQ: {"op":"WRITE_ROUTE","file":"lol.txt","user":"sahu"}
+
+[2025-11-20 19:15:57.997] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:16:00.047] REQ: {"op":"READ_ROUTE","file":"lol.txt","user":"sahu"}
+
+[2025-11-20 19:16:03.219] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:16:08.342] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:16:13.565] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:16:18.588] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:16:23.704] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:16:28.824] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:16:32.310] REQ: {"op":"ADDACCESS","file":"lol.txt","mode":"W","target_user":"aaku","user":"sahu"}
+
+[2025-11-20 19:16:34.043] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:16:39.265] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:16:44.489] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:16:50.630] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:16:55.853] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:17:00.702] REQ: {"op":"DELETE","file":"lol.txt","user":"sahu"}
+
+[2025-11-20 19:17:00.892] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:17:04.590] REQ: {"op":"CLI_DEREGISTER","user":"sahu"}
+
+[2025-11-20 19:17:04.593] DISCONNECT: user=sahu from 0.0.0.0:47626
+[2025-11-20 19:17:06.011] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:17:31.812] REQ: {"op":"CLI_DEREGISTER","user":"lohith"}
+
+[2025-11-20 19:17:31.815] DISCONNECT: user=lohith from 0.0.0.0:60865
+[2025-11-20 19:18:01.304] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"ss_host":"192.168.1.107","files":""}
+
+[2025-11-20 19:18:01.305] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-11-20 19:18:06.311] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:18:07.583] REQ: {"op":"CLI_REGISTER","user":"lohith"}
+
+[2025-11-20 19:18:07.586] RESP: status=0 user=lohith
+[2025-11-20 19:18:11.320] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-11-20 19:18:11.460] REQ: {"op":"VIEW_ROUTE","user":"lohith"}
+
+[2025-11-20 19:18:16.328] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:30:40.969] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"ss_host":"192.168.1.102","files":""}
+
+[2025-12-02 16:30:40.973] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-12-02 16:30:45.979] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:30:50.986] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:30:55.989] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:31:00.996] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:31:06.002] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:31:11.015] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:31:16.018] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:31:21.035] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:31:26.045] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:31:31.052] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:31:36.058] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:31:41.065] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:31:46.070] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:32:21.665] REQ: {"op":"SS_REGISTER","ss_id":"ss-1","ss_client_port":6001,"ss_nm_port":6000,"ss_host":"192.168.1.100","files":""}
+
+[2025-12-02 16:32:21.668] RESP: NM_ACK status=0 to ss_id=ss-1
+[2025-12-02 16:32:26.689] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:32:30.456] REQ: {"op":"CLI_REGISTER","user":"lokola"}
+
+[2025-12-02 16:32:30.457] RESP: status=0 user=lokola
+[2025-12-02 16:32:31.707] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:32:33.253] REQ: {"op":"LIST_USERS","user":"lokola"}
+
+[2025-12-02 16:32:34.944] REQ: {"op":"CLI_REGISTER","user":"sahu"}
+
+[2025-12-02 16:32:34.945] RESP: status=0 user=sahu
+[2025-12-02 16:32:36.729] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:32:38.989] REQ: {"op":"VIEW_ROUTE","user":"sahu"}
+
+[2025-12-02 16:32:41.748] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:32:46.773] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:32:51.804] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:32:52.790] REQ: {"op":"CREATE","file":"lokolalola.txt","user":"lokola"}
+
+[2025-12-02 16:32:56.890] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:33:02.119] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:33:02.278] REQ: {"op":"DELETE","file":"lokolalola.txt","user":"lokola"}
+
+[2025-12-02 16:33:07.151] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:33:12.170] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:33:17.270] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:33:22.307] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:33:27.405] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:33:32.432] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:33:37.452] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:33:42.486] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:33:47.513] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:33:52.532] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:33:57.553] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:34:02.576] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:34:07.596] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:34:12.618] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:34:17.687] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:34:22.721] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:34:27.872] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:34:32.894] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:34:37.911] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:34:42.980] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:34:48.004] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:34:53.120] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:34:58.235] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:35:03.360] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:35:08.389] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:35:13.411] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:35:18.482] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:35:23.543] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:35:28.562] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:35:33.575] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:35:38.663] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:35:43.881] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:35:48.898] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:35:54.015] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:35:59.034] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:36:04.246] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:36:09.288] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:36:14.306] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:36:19.326] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:36:24.350] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:36:29.462] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:36:34.483] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:36:39.517] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:36:44.595] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:36:49.722] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:36:54.745] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:36:59.775] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:37:04.796] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:37:09.821] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:37:14.902] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:37:20.029] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:37:25.074] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:37:30.094] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:37:35.117] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:37:40.199] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:37:45.239] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:37:50.258] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:37:55.350] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:38:00.419] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:38:05.443] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:38:10.520] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:38:15.549] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:38:20.573] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:38:25.662] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:38:30.694] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:38:35.719] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:38:40.753] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:38:45.836] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:38:50.961] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:38:56.008] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:39:01.054] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:39:06.088] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:39:11.121] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:39:16.347] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:39:21.472] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:39:26.508] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:39:31.543] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:39:36.573] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:39:41.649] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:39:46.673] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:39:51.882] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:39:57.006] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:40:02.049] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:40:07.075] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:40:12.115] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:40:17.167] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:40:22.298] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:40:27.339] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:40:32.363] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:40:37.396] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:40:42.422] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:40:47.452] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:40:52.475] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:40:57.501] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:41:02.524] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:41:07.568] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:41:12.680] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:41:17.707] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:41:22.814] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:41:27.840] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:41:32.883] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:41:37.904] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:41:42.931] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:41:47.989] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:41:53.077] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:41:58.139] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:42:03.176] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:42:08.223] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:42:13.245] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:42:18.261] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:42:23.361] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:42:28.395] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:42:33.417] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:42:38.489] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:42:43.609] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:42:48.636] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:42:53.748] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:42:58.968] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:43:04.003] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:43:09.024] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:43:14.155] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:43:19.212] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:43:24.294] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:43:29.402] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:43:34.451] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:43:39.585] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:43:44.682] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:43:49.718] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:43:54.784] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:43:59.833] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:44:04.883] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:44:09.909] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:44:15.156] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:44:20.208] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:44:25.230] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:44:30.253] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:44:35.276] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:44:40.299] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:44:45.327] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:44:50.370] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:44:55.391] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:45:00.431] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:45:05.462] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:45:10.487] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:45:15.585] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:45:20.607] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:45:25.662] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:45:30.682] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:45:35.762] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:45:40.787] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:45:45.828] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:45:50.866] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:45:55.895] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:46:00.939] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:46:06.003] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:46:11.046] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:46:16.069] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:46:21.136] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:46:26.168] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:46:31.208] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:46:36.275] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:46:41.327] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:46:46.424] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:46:51.475] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:46:56.509] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:47:01.551] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:47:06.581] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:47:11.724] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:47:16.746] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:47:21.769] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:47:26.795] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:47:31.876] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:47:36.918] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:47:41.954] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:47:46.979] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:47:52.051] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:47:57.255] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:48:02.287] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:48:07.309] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:48:12.332] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:48:17.352] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:48:22.451] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:48:27.503] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:48:32.576] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:48:37.621] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:48:42.733] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:48:47.771] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:48:52.872] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:48:57.907] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:49:02.928] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:49:07.953] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:49:12.984] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:49:18.004] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:49:23.029] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:49:28.097] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:49:33.122] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:49:38.143] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:49:43.165] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:49:48.189] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:49:53.296] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:49:58.323] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:50:03.364] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:50:08.397] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:50:13.429] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:50:18.480] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:50:23.538] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:50:28.554] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:50:33.578] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:50:38.607] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:50:43.675] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:50:48.695] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:50:53.807] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:50:58.926] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:51:04.046] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:51:09.094] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:51:14.191] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:51:19.251] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:51:24.300] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:51:29.343] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:51:34.365] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:51:39.570] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:51:44.588] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:51:49.578] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:51:54.605] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:51:59.620] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:52:04.636] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:52:09.664] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:52:14.696] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:52:19.809] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:52:24.824] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:52:29.862] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:52:34.895] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:52:39.918] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:52:44.948] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:52:49.966] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:52:55.046] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:53:00.124] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:53:05.173] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:53:10.200] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:53:15.221] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:53:20.258] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:53:25.296] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:53:30.329] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:53:35.365] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:53:40.399] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:53:45.433] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:53:50.460] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:53:55.482] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:54:00.510] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:54:05.536] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:54:10.572] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:54:15.605] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:54:20.654] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:54:25.695] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:54:30.734] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:54:35.772] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:54:40.819] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:54:45.861] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:54:50.894] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:54:55.920] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:55:00.981] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:55:06.003] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:55:11.038] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:55:16.060] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:55:21.150] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:55:26.186] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:55:31.191] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:55:36.199] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:55:41.241] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:55:46.282] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:55:51.385] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:55:56.399] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:56:01.424] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:56:06.522] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:56:11.543] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:56:16.577] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:56:21.611] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:56:26.671] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:56:31.908] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:56:36.931] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:56:41.968] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:56:47.008] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:56:52.034] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:56:57.059] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:57:02.091] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:57:07.141] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:57:12.162] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:57:17.182] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:57:22.293] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:57:27.317] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:57:32.385] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:57:37.404] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:57:42.434] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:57:47.486] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:57:52.514] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:57:57.532] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:58:02.553] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:58:07.576] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:58:12.672] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:58:17.701] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:58:22.812] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:58:27.958] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:58:32.977] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:58:38.014] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:58:43.101] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:58:48.123] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:58:53.250] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:58:58.350] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:59:03.464] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:59:08.487] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:59:13.511] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:59:18.527] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:59:23.551] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:59:28.601] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:59:33.646] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:59:38.663] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:59:43.684] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:59:48.725] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:59:53.748] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 16:59:58.870] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:00:03.888] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:00:08.913] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:00:13.942] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:00:18.958] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:00:23.982] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:00:29.060] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:00:34.100] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:00:39.165] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:00:44.206] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:00:49.241] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:00:54.293] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:00:59.396] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:01:04.430] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:01:09.481] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:01:14.519] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:01:19.657] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
+[2025-12-02 17:01:24.686] REQ: {"op":"SS_HEARTBEAT","ss_id":"ss-1"}
+
